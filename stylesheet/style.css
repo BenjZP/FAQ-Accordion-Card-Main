@@ -1,0 +1,69 @@
+  
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+  box-sizing: border-box;
+  border-radius: 1.5em;
+  background-color: white;
+  padding: 13em 1em 2em 1em;
+  max-width: fit-content;
+}
+
+header {
+  text-align: center;
+}
+
+details {
+  padding: .5em;
+}
+
+.illustration-box-desktop {
+  position: fixed;
+  height: 2.8em;
+  right: 53.9vw;
+  bottom: 84vh;
+  z-index: 3;
+}
+
+.woman-online-desktop {
+  position: fixed;
+  height: 7em;
+  right: 30vw;
+  bottom: 81vh;
+  z-index: 2;
+}
+
+.bg-pattern {
+  position: fixed;
+  height: 10em;
+  top: 1.5vh;
+  left: 28vw;
+  z-index: 1;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  margin-top: 3em;
+  font-size: 1em;
+}
