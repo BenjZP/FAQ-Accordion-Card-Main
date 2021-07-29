@@ -11,7 +11,7 @@
  
    <!--Custom CSS-->
    <link rel="stylesheet" href="/stylesheet/style.css">
- 
+
    <!--Google Fonts-->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,56 +31,57 @@
        <header>
          <strong>FAQ</strong>
        </header>
-       <details class="accordion">
-         <summary>
-           How many team members can I invite?
-         </summary>
-         <p class="panel">
-           You can invite up to 2 additional users on the Free plan. There is no limit on 
-           team members for the Premium plan.
-         </p>
-       </details>
 
-       <details class="accordion">
-         <summary>
-           What is the maximum file upload size?
-         </summary>
-         <p class="panel">
+       <button class="accordion" id="button1">
+          <h1>How many team members can I invite?</h1>
+       </button>
+       <div class="pannel" id="pannel1">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is no limit on 
+            team members for the Premium plan. 
+          </p>
+        </div>
+
+        <button class="accordion" id="button2">
+          <h1>What is the maximum file upload size?</h1>
+       </button>
+       <div class="pannel" id="pannel2">
+         <p>
            No more than 2GB. All files in your account must fit your allotted storage space.
          </p>
-       </details>
- 
-       <details class="accordion">
-        <summary>
-          How do I reset my password?
-        </summary>
-        <p class="panel">
+        </div>
+
+        <button class="accordion" id="button3">
+          <h1>How do I reset my password?</h1>
+       </button>
+       <div class="pannel" id="pannel3">
+         <p>
           Click “Forgot password” from the login page or “Change password” from your profile page.
           A reset link will be emailed to you.
-        </p>
-       </details>
- 
-       <details class="accordion">
-         <summary>
-           How do I reset my password?
-         </summary>
-         <p class="panel">
-           Yes! Send us a message and we’ll process your request no questions asked.
          </p>
-       </details>
- 
-       <details class="accordion">
-         <summary>
-           Do you provide additional support?
-         </summary>
-         <p class="panel">
-           Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </div>
+
+        <button class="accordion" id="button4">
+          <h1>Can I cancel my subscription?</h1>
+       </button>
+       <div class="pannel" id="pannel4">
+         <p>
+          Yes! Send us a message and we’ll process your request no questions asked.
          </p>
-       </details>
+        </div>
+
+        <button class="accordion" id="button5">
+          <h1>Do you provide additional support?</h1>
+       </button>
+       <div class="pannel" id="pannel5">
+         <p>
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+         </p>
+        </div>
+        <script src="/stylesheet/script.js"></script>
      </section>
-   </main>
- 
-   <footer class="attribution">
+
+      <footer class="attribution">
      <p>
        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
        <br>

@@ -7,63 +7,79 @@
   box-sizing: border-box;
 }
 
-html {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-}
-
 body {
-  font-family: 'Kumbh Sans', sans-serif;
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-}
-
-main {
-  box-sizing: border-box;
-  border-radius: 1.5em;
-  background-color: white;
-  padding: 13em 1em 2em 1em;
-  max-width: fit-content;
+  font-style: Kumbh-Sans;
+  background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 header {
   text-align: center;
+  font-size: 2.5em;
+  font-weight: bolder;
+  padding: 2em;
 }
 
-details {
-  padding: .5em;
+section {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2em;
+  margin: 2em;
+  font-size: 1em;
+  background: white;
+  padding: 2em;
 }
 
-.illustration-box-desktop {
-  position: fixed;
-  height: 2.8em;
-  right: 53.9vw;
-  bottom: 84vh;
-  z-index: 3;
+h1 {
+  font-size: 1em;
+  font-weight: lighter;
 }
 
-.woman-online-desktop {
-  position: fixed;
-  height: 7em;
-  right: 30vw;
-  bottom: 81vh;
-  z-index: 2;
+button {
+  padding: 2em; 
 }
 
-.bg-pattern {
-  position: fixed;
-  height: 10em;
-  top: 1.5vh;
-  left: 28vw;
-  z-index: 1;
+/*Styling an accordion*/
+.accordion {
+  background-color: white;
+  color: hsl(240, 6%, 50%);
+  cursor: pointer;
+  padding: 1em;
+  max-width: 100%;
+  border: none;
+  text-align: justify;
+  outline: none;
+  font-size: 1em;
+  transition: 0.4s;
 }
 
+.accordion:after {
+  text-align: justify;
+  font-size: 1em;
+  float: right;
+  content: url(/images/icon-arrow-down.svg);
+}
+
+.active:after {
+  content: url(/images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
+
+.active, .accordion:hover {
+  color: hsl(14, 88%, 65%); 
+}
+
+.pannel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/*Footer*/
 footer {
   text-align: center;
   position: relative;
-  margin-top: 3em;
+  margin: 3em;
   font-size: 1em;
 }
