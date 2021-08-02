@@ -1,14 +1,11 @@
   
-*,
-*::after,
-*::before {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-style: Kumbh-Sans;
+  font-style: Kumbh-Sans, Sans-serif;
   background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
@@ -16,7 +13,7 @@ header {
   text-align: center;
   font-size: 2.5em;
   font-weight: bolder;
-  padding: 2em;
+  padding: 2em 2em .5em 2em;
 }
 
 section {
@@ -26,35 +23,39 @@ section {
   margin: 2em;
   font-size: 1em;
   background: white;
-  padding: 2em;
+  padding: .5em;
 }
 
 h1 {
-  font-size: 1em;
-  font-weight: lighter;
+  font-size: .85em;
+  font-weight: normal;
+}
+
+p {
+  color: hsl(240, 6%, 50%);
+  padding-bottom: 1em;
 }
 
 button {
-  padding: 2em; 
+  border-bottom: solid 3px black;
 }
-
 /*Styling an accordion*/
 .accordion {
   background-color: white;
-  color: hsl(240, 6%, 50%);
+  color: hsl(237, 12%, 33%);
+  font-weight: bold;
   cursor: pointer;
-  padding: 1em;
-  max-width: 100%;
+  padding: .9em;
+  width: 100%;
   border: none;
-  text-align: justify;
+  text-align: left;
   outline: none;
   font-size: 1em;
   transition: 0.4s;
 }
 
 .accordion:after {
-  text-align: justify;
-  font-size: 1em;
+  display: flex;
   float: right;
   content: url(/images/icon-arrow-down.svg);
 }
@@ -62,6 +63,11 @@ button {
 .active:after {
   content: url(/images/icon-arrow-down.svg);
   transform: rotate(180deg);
+}
+
+.active:focus-within {
+  color: black;
+  font-weight: bolder;
 }
 
 .active, .accordion:hover {
@@ -78,6 +84,7 @@ button {
 
 /*Footer*/
 footer {
+  color: black;
   text-align: center;
   position: relative;
   margin: 3em;
