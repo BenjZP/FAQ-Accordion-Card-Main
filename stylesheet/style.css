@@ -2,84 +2,83 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-style: Kumbh-Sans, Sans-serif;
+  font-family: Kumbh-Sans, Sans-serif;
   background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 header {
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: bolder;
-  padding: 2em 2em .5em 2em;
+font-size: 3rem;
+margin: 2rem 0rem;
 }
 
 section {
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 2em;
-  margin: 2em;
-  font-size: 1em;
-  background: white;
-  padding: .5em;
-}
-
-h1 {
-  font-size: .85em;
-  font-weight: normal;
-}
-
-p {
-  color: hsl(240, 6%, 50%);
-  padding-bottom: 1em;
-}
-
-button {
-  border-bottom: solid 3px black;
-}
-/*Styling an accordion*/
-.accordion {
-  background-color: white;
-  color: hsl(237, 12%, 33%);
-  font-weight: bold;
-  cursor: pointer;
-  padding: .9em;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1em;
-  transition: 0.4s;
-}
-
-.accordion:after {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  float: right;
-  content: url(/images/icon-arrow-down.svg);
+  flex-direction: column;
+  align-items: center;
 }
 
-.active:after {
-  content: url(/images/icon-arrow-down.svg);
+.title {
+  font-size: 3rem;
+  margin: 2rem 0rem;
+}
+
+.faq {
+  max-width: 700px;
+  margin-top: 1rem;
+  padding-bottom: 1rem ;
+  border-bottom: 2px solid hsl(240, 5%, 91%);
+  cursor: pointer;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h1 {
+  font-size: .85rem;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.answer p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+/*Styling an accordion*/
+.faq.active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active .arrow {
   transform: rotate(180deg);
 }
 
-.active:focus-within {
-  color: black;
-  font-weight: bolder;
+.arrow {
+  transition: transform .5s ease-in;
 }
 
-.active, .accordion:hover {
-  color: hsl(14, 88%, 65%); 
-}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px)
+  }
 
-.pannel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
 }
 
 /*Footer*/
