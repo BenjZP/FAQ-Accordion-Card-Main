@@ -1,92 +1,91 @@
-  
-* {
+
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkGrayishBlue: hsl(240, 6%, 50%);
+  --lightGrayishBlue: hsl(240, 5%, 91%);
+  --fontSize: 12px;
+}
+
+html {
+  font-size: var(--fontSize);
 }
 
 body {
-  font-style: Kumbh-Sans, Sans-serif;
-  background-image: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: Kumbh-Sans, Sans-serif;
+  background: linear-gradient( var(--softViolet), var(--softBlue));
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
-header {
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: bolder;
-  padding: 2em 2em .5em 2em;
-}
-
-section {
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 2em;
-  margin: 2em;
-  font-size: 1em;
+.wrapper {
   background: white;
-  padding: .5em;
+  border-radius: 30px;
+  height: 509px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1260% 65%; 
 }
 
-h1 {
-  font-size: .85em;
-  font-weight: normal;
+.answer {
+  display: none;
 }
 
-p {
-  color: hsl(240, 6%, 50%);
-  padding-bottom: 1em;
-}
-
-button {
-  border-bottom: solid 3px black;
-}
-/*Styling an accordion*/
-.accordion {
-  background-color: white;
-  color: hsl(237, 12%, 33%);
-  font-weight: bold;
-  cursor: pointer;
-  padding: .9em;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1em;
-  transition: 0.4s;
-}
-
-.accordion:after {
+.accordion-wrapper {
+  margin-top: 70px;
   display: flex;
-  float: right;
-  content: url(/images/icon-arrow-down.svg);
+  flex-direction: column;
 }
 
-.active:after {
-  content: url(/images/icon-arrow-down.svg);
-  transform: rotate(180deg);
+.accordion-question {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.active:focus-within {
-  color: black;
-  font-weight: bolder;
+.question-answer-accordion {
+  width: 350px;
+  border-bottom: 1px solid var(--lightGrayishBlue);
 }
 
-.active, .accordion:hover {
-  color: hsl(14, 88%, 65%); 
+.title-accordion {
+  font-size: 3rem;
+  margin-top: 0px;
 }
 
-.pannel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.question-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.4rem 0rem;
+  color: var(--veryDarkGreyBlue);
 }
 
-/*Footer*/
-footer {
-  color: black;
-  text-align: center;
-  position: relative;
-  margin: 3em;
-  font-size: 1em;
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.question img {
+  align-self: center;
+}
+
